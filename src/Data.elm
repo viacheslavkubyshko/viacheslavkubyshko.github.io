@@ -5,7 +5,6 @@ module Data exposing
     , Education
     , EndDate(..)
     , PrintLink
-    , Project
     , Skill
     , commercialExperience
     , education
@@ -156,14 +155,6 @@ commercialExperience =
             ]
       }
     ]
-
-
-type alias Project =
-    { title : String
-    , url : Maybe String
-    , description : String
-    , tech : String
-    }
 
 
 type alias Education =

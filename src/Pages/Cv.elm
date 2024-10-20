@@ -2,7 +2,7 @@ module Pages.Cv exposing (Model, Msg, page)
 
 import Color
 import Components.Image as Image
-import Data exposing (CommercialExperience, Date, Detail, Education, EndDate(..), Project, Skill)
+import Data exposing (CommercialExperience, Date, Detail, Education, EndDate(..), Skill)
 import Effect
 import Element exposing (..)
 import Element.Border as Border
@@ -176,15 +176,6 @@ viewEducation x =
             , label = paragraph TextStyle.header2.attrs [ preparedText x.title ]
             }
         , paragraph [ Font.color Color.detail ] [ preparedText x.details ]
-        ]
-
-
-viewProject : Project -> Element msg
-viewProject x =
-    column [ spacing 16, InlineStyle.render [ ( "break-inside", "avoid" ) ] ]
-        [ titleWithOptionalLink { url = x.url, label = paragraph TextStyle.header2.attrs [ preparedText x.title ] }
-        , paragraph [] [ preparedText x.description ]
-        , paragraph [ Font.color Color.detail ] [ preparedText <| x.tech ]
         ]
 
 
