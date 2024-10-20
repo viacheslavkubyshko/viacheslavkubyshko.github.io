@@ -1,0 +1,20 @@
+/* Disable ligatures on print (because ligatures damage the text) */
+@media print {
+  * {
+    font-variant-ligatures: no-common-ligatures !important;
+  }
+}
+
+/* Hide `only-screen` on media `print` */
+@media print {
+  .only-screen {
+    display: none !important;
+  }
+}
+
+/* Hide `only-print` on media `screen` */
+@media screen {
+  .only-print {
+    display: none !important;
+  }
+}
